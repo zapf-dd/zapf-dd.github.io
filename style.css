@@ -18,15 +18,7 @@ core-toolbar {
     color: #FFF;
 }
 
-@media (max-width:960px) {
-    core-drawer-panel:not([narrow]) .headers {
-        height: 150px;
-    }
+core-drawer-panel:not([narrow]) .headers {
+        height: 250px;
 }
 
-
-@media (min-width:960px) {
-        .headers {
-            height: 250px;
-        }
-    }
