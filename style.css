@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+}
+[main] {
+    background-color: #F9F9F9;
+}
+[drawer] {
+    background-color: #FFFFFF;
+}
+
+core-toolbar {
+    background: #F44336;
+    color: #FFF;
+}
+
+#login {
+    background-color: #00C853;
+    color: #FFF;
+}
+
+@media (max-width:960px) {
+    core-drawer-panel:not([narrow]) .headers {
+        height: 150px;
+    }
+}
+
+
+@media (min-width:960px) {
+        .headers {
+            height: 250px;
+        }
+    }

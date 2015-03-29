@@ -1,10 +1,52 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="app.js"></script>
 
-<head></head>
+    <link rel="import" href="elements.html">
+    <link rel="stylesheet" href="style.css">
 
-<body>
-hello world.
+</head>
+
+
+<body fullbleed layout vertical>
+
+
+<core-drawer-panel id="drawerPanel">
+    <core-header-panel drawer mode="seamed" >
+        <core-toolbar  class="headers"></core-toolbar>
+
+        <core-menu>
+            <core-item labek="Anmeldung">Anmeldung</core-item>
+            <core-item label="Neuigkeiten"></core-item>
+            <core-item label="Programm"></core-item>
+            <core-item label="Anreise"></core-item>
+            <core-item label="Sponsoren"></core-item>
+
+
+        </core-menu>
+
+    </core-header-panel>
+
+    <core-header-panel main mode="seamed">
+        <core-toolbar class="headers">
+            <core-icon-button core-drawer-toggle icon="menu">
+            </core-icon-button>
+            <div horizontal layout end class="headers">
+                <div>ZaPF in Dresden 2016</div>
+            </div>
+        </core-toolbar>
+
+
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </core-header-panel>
+
+
+</core-drawer-panel>
+
+
+
 
 </body>
-
 </html>
