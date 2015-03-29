@@ -1,24 +1,32 @@
-body {
-    font-family: sans-serif;
-}
-[main] {
-    background-color: #F9F9F9;
-}
-[drawer] {
-    background-color: #FFFFFF;
-}
+    body {
+        font-family: sans-serif;
+    }
+    [main] {
+        background-color: #FFFFFF;
+    }
+    [drawer] {
+        background-color: #F9F9F9;
+    }
 
-core-toolbar {
-    background: #F44336;
-    color: #FFF;
-}
+    core-toolbar {
+        background: #F44336;
+        color: #FFF;
+    }
 
-#login {
-    background-color: #00C853;
-    color: #FFF;
-}
+    .container {
+        padding: 30px;
+    }
 
-core-drawer-panel:not([narrow]) .headers {
-        height: 250px;
-}
+    #login {
+        background-color: #00C853;
+        color: #FFF;
+    }
 
+    core-drawer-panel:not([narrow]) .headers {
+            height: 192px;
+    }
+
+
+    #maincontainer {
+        max-width: 800px
+    }
