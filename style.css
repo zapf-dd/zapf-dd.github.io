@@ -13,7 +13,21 @@
         color: #FFF;
     }
 
+    #frame {
+        overflow: hidden;
+        display: block;
+         width: 100%;
+         border: none;
+
+     }
+
+    iframe {
+        overflow: hidden;
+        width: 100%;
+    }
+
     .container {
+        max-width: 800px;
         padding: 30px;
     }
 
@@ -27,6 +41,3 @@
     }
 
 
-    #maincontainer {
-        max-width: 800px
-    }
