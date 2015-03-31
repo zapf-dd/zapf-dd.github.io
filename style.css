@@ -1,43 +1,25 @@
-    body {
-        font-family: sans-serif;
-    }
-    [main] {
-        background-color: #FFFFFF;
-    }
-    [drawer] {
-        background-color: #F9F9F9;
-    }
+body {
+    font-family: sans-serif;
+}
+[main] {
+    background-color: #FFFFFF;
+}
+[drawer] {
+    background-color: #F9F9F9;
+}
 
-    core-toolbar {
-        background: #F44336;
-        color: #FFF;
-    }
+core-toolbar {
+    background: #F44336;
+    color: #FFF;
+}
 
-    #frame {
-        overflow: hidden;
-        display: block;
-         width: 100%;
-         border: none;
 
-     }
+core-drawer-panel:not([narrow]) .headers {
+        height: 192px;
+}
 
-    iframe {
-        overflow: hidden;
-        width: 100%;
-    }
-
-    .container {
-        max-width: 800px;
-        padding: 30px;
-    }
-
-    #login {
-        background-color: #00C853;
-        color: #FFF;
-    }
-
-    core-drawer-panel:not([narrow]) .headers {
-            height: 192px;
-    }
-
+core-menu a {
+    color: #000;
+    text-decoration: none;
+}
 
