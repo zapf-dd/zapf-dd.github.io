@@ -11,25 +11,51 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="196x196" href="rocket.png">
 
+
+
+
+
 </head>
 
 
 <body fullbleed layout vertical>
+<template is="auto-binding">
+
+    <script>
+        var template = document.querySelector('template[is="auto-binding"]');
+        template.pages = [
+            {name: 'Intro', hash: 'one', url: '/src/welcome.html', content: 'Willkommen'},
+            {name: 'asdfasdf', hash: 'two', url: '/src/registration.html', content: 'Hallo'}
+        ];
+
+        template.addEventListener('template-bound', function(e) {
+            // Use URL hash for initial route. Otherwise, use the first page.
+            this.route = this.route || DEFAULT_ROUTE;
+        });
+
+        template.menuItemSelected = function(e, detail, sender) {
+            if (detail.isSelected) {
+                document.querySelector('core-drawer-panel').closeDrawer();
+            }
+        };
+    </script>
+
+
+
+
+
 
 
 <core-drawer-panel id="drawerPanel">
-    <core-header-panel drawer mode="seamed" >
+    <core-header-panel id="cdrawer" drawer mode="seamed" >
         <core-toolbar  class="headers"></core-toolbar>
 
-        <core-menu>
-            <core-item label="Anmeldung">Anmeldung</core-item>
-            <core-item label="Neuigkeiten"></core-item>
-            <core-item label="Programm"></core-item>
-            <core-item label="Anreise"></core-item>
-            <core-item label="Sponsoren"></core-item>
-            <paper-button raised>Hello</paper-button>
-
-
+        <core-menu valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}">
+            <template repeat="{{page in pages}}">
+                <paper-item>
+                    <a href="#{{page.hash}}">{{page.name}}</a>
+                </paper-item>
+            </template>
         </core-menu>
 
     </core-header-panel>
@@ -42,8 +68,18 @@
         </core-toolbar>
 
 
-        <div id="iframehere"></div>
-            <iframe id="frame" scrolling="no"  src="src/welcome.html"></iframe>
+
+
+
+        <div class="content">
+                <core-animated-pages valueattr="hash" selected="{{route}}">
+                    <template repeat="{{page in pages}}">
+                        <section hash="{{page.hash}}" layout vertical>
+                                <div>{{page.content}}</div>
+                        </section>
+                    </template>
+                </core-animated-pages>
+            </div>
 
 
 
@@ -55,6 +91,6 @@
 
 
 
-
+</template>
 </body>
 </html>
