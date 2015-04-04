@@ -17,6 +17,9 @@ core-toolbar {
 core-menu a {
     color: #000;
     text-decoration: none;
+    margin-left: 10px;
+    margin-top: 2px;
+
 }
 
 .content {

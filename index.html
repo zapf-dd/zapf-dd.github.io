@@ -43,11 +43,11 @@
 
 <core-drawer-panel id="drawerPanel">
 
-    <core-header-panel id="cdrawer" drawer mode="seamed" >
+    <core-header-panel id="cdrawer" drawer mode="seamed" style="box-shadow: rgba(0, 0, 0, 0.098) 0 2px 4px;">
         <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}"
                 style="height: 100%">
-            <paper-item>
-                <a href="#Willkommen">Willkommen</a>
+            <paper-item layout>
+                <core-icon icon="home"></core-icon><a href="#Willkommen">Willkommen</a>
             </paper-item>
             <core-item style="margin-top: 100%;">
                 <paper-button flex raised id="registerbutton">Anmeldung</paper-button>
@@ -57,16 +57,14 @@
 
 
 
-    <core-scroll-header-panel main condenses keepCondensedHeader>
-        <paper-shadow z="1">
-        <core-toolbar class="tall">
+    <core-scroll-header-panel main condenses keepCondensedHeader >
+        <core-toolbar class="tall" style="box-shadow: rgba(0, 0, 0, 0.098) 0px 2px 4px;">
             <core-icon-button core-drawer-toggle icon="menu" style="background-color: transparent;"></core-icon-button>
             <div flex horizontal end-justified layout>
                 <span id="countdown">Bitte Javascript aktivieren.</span>
             </div>
             <span class="bottom indent" >ZaPF in Dresden 2016</span>
         </core-toolbar>
-        </paper-shadow>
 
 
 
@@ -78,7 +76,7 @@
                         <section hash="Anmeldung" layout vertical>
                             <registration-page cross-fade></registration-page>
                         </section>
-                </core-animated-pages>
+            </core-animated-pages>
             </div>
 
 
