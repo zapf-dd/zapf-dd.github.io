@@ -5,13 +5,14 @@ body {
     background-color: #FFFFFF;
 }
 [drawer] {
-    background-color: #F9F9F9;
+    background-color: #f3f6f8;
 }
 
 core-toolbar {
-    background: #F44336;
+    background: #607d8b;
     color: #FFF;
 }
+
 
 
 core-menu a {
@@ -21,5 +22,6 @@ core-menu a {
 
 .content {
     padding: 30px;
+    max-width: 960px;
 }
 

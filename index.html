@@ -6,19 +6,22 @@
 
     <link rel="import" href="elements.html">
     <link rel="stylesheet" href="style.css">
+    <link rel="import" href="src/welcome-page.html">
+    <link rel="import" href="src/registration-page.html">
 
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="196x196" href="rocket.png">
-
-
-
 
 
 </head>
 
 
+
+
 <body fullbleed layout vertical>
+
+
+
 <template is="auto-binding">
 
     <script>
@@ -38,13 +41,8 @@
 
 
 
-
-
-
-
 <core-drawer-panel id="drawerPanel">
     <core-header-panel id="cdrawer" drawer mode="seamed" >
-        <core-toolbar></core-toolbar>
 
         <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}">
             <paper-item>
@@ -57,82 +55,22 @@
 
     </core-header-panel>
 
-    <core-scroll-header-panel main mode="standard" condenses>
+    <core-scroll-header-panel main mode="waterfall" condenses>
         <core-toolbar class="tall">
-            <core-icon-button core-drawer-toggle icon="menu" class="bottom" style="background-color: transparent;">
-                <div id="headerBg" style="opacity: 1; transform: translate3d(0px, 0px, 0px);
-                background: url(https://s3.amazonaws.com/uifaces/faces/twitter/angelcolberg/128.jpg)
-                 0px 50% / cover no-repeat;"></div>
-            </core-icon-button>
-                <span flex class="bottom" >ZaPF in Dresden 2016</span>
+            <core-icon-button core-drawer-toggle icon="menu" style="background-color: transparent;"></core-icon-button>
+            <span flex class="bottom indent" >ZaPF in Dresden 2016</span>
         </core-toolbar>
 
 
 
 
-
-        <div class="content">
+        <div class="content" style="margin-left: auto; margin-right: auto;">
                 <core-animated-pages valueattr="hash" selected="{{route}}">
                         <section hash="Willkommen" layout vertical>
-                            <div class="container" layout flex>
-
-                                <h1>Willkomen.</h1>
-
-
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                                    dolor sit amet.</p>
-
-
-                                <div class="heading" onclick="document.querySelector('#collapse1').toggle();"><h1>Was ist die ZaPF?</h1></div>
-                                <core-collapse id="collapse1" class="core-collapse-closed" style="overflow: hidden;">
-                                    <div class="content">
-                                        <div>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea,
-                                            id minim maiestatis incorrupte duo. Dolorum verterem ad ius, his et nullam verterem.
-                                            Eu alia debet usu, an doming tritani est. Vix ad ponderum petentium suavitate, eum eu
-                                            tempor populo, graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur
-                                            nec, voluptua periculis has ut, at eos discere deleniti sensibus. Lorem ipsum dolor sit
-                                            amet, per in nusquam nominavi periculis, sit elit oportere ea, id minim maiestatis
-                                            incorrupte duo. Dolorum verterem ad ius, his et nullam verterem. Eu alia debet usu,
-                                            an doming tritani est. Vix ad ponderum petentium suavitate, eum eu tempor populo,
-                                            graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur nec, voluptua
-                                            periculis has ut, at eos discere deleniti sensibus.</div>
-                                    </div>
-                                </core-collapse>
-
-
-                            </div>
+                           <welcome-page></welcome-page>
                         </section>
                         <section hash="Anmeldung" layout vertical>
-                            <div class="container" layout flex>
-
-                                <h1>Anmeldung.</h1>
-
-                                <paper-input-decorator floatingLabel label="Name">
-                                    <textarea></textarea>
-                                </paper-input-decorator>
-                                <paper-input-decorator floatingLabel label="Fachsemester">
-                                    <textarea></textarea>
-                                </paper-input-decorator>
-
-                                <paper-dropdown-menu label="Essen">
-                                    <paper-dropdown class="dropdown">
-                                        <core-menu class="menu">
-                                            <paper-item>Fleisch</paper-item>
-                                            <paper-item>Vegetarisch</paper-item>
-                                            <paper-item>Vegan</paper-item>
-                                        </core-menu>
-                                    </paper-dropdown>
-                                </paper-dropdown-menu>
-
-
-
-
-                            </div>
+                            <registration-page></registration-page>
                         </section>
                 </core-animated-pages>
             </div>
