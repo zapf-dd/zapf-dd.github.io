@@ -14,10 +14,6 @@ core-toolbar {
 }
 
 
-core-drawer-panel:not([narrow]) .headers {
-        height: 192px;
-}
-
 core-menu a {
     color: #000;
     text-decoration: none;

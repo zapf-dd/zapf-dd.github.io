@@ -44,7 +44,7 @@
 
 <core-drawer-panel id="drawerPanel">
     <core-header-panel id="cdrawer" drawer mode="seamed" >
-        <core-toolbar  class="headers"></core-toolbar>
+        <core-toolbar></core-toolbar>
 
         <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}">
             <paper-item>
@@ -57,11 +57,14 @@
 
     </core-header-panel>
 
-    <core-header-panel main mode="waterfall">
-        <core-toolbar class="headers">
-            <core-icon-button core-drawer-toggle icon="menu" class="bottom">
+    <core-scroll-header-panel main mode="standard" condenses>
+        <core-toolbar class="tall">
+            <core-icon-button core-drawer-toggle icon="menu" class="bottom" style="background-color: transparent;">
+                <div id="headerBg" style="opacity: 1; transform: translate3d(0px, 0px, 0px);
+                background: url(https://s3.amazonaws.com/uifaces/faces/twitter/angelcolberg/128.jpg)
+                 0px 50% / cover no-repeat;"></div>
             </core-icon-button>
-                <span flex class="bottom">ZaPF in Dresden 2016</span>
+                <span flex class="bottom" >ZaPF in Dresden 2016</span>
         </core-toolbar>
 
 
@@ -137,7 +140,7 @@
 
 
 
-    </core-header-panel>
+    </core-scroll-header-panel>
 
 
 </core-drawer-panel>
