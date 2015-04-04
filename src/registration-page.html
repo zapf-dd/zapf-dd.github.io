@@ -1,5 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-
+<link rel="import" href="../bower_components/paper-elements/paper-elements.html">
 
 <polymer-element name="registration-page" noscript>
     <template>
@@ -8,12 +8,32 @@
 
             <h1>Anmeldung.</h1>
 
+            <paper-input-decorator floatingLabel label="Name">
+                <textarea></textarea>
+            </paper-input-decorator>
+            <paper-input-decorator floatingLabel label="Fachsemester">
+                <textarea></textarea>
+            </paper-input-decorator>
+
+            <paper-dropdown-menu label="Essen">
+                <paper-dropdown class="dropdown">
+                    <core-menu class="menu">
+                        <paper-item>Fleisch</paper-item>
+                        <paper-item>Vegetarisch</paper-item>
+                        <paper-item>Vegan</paper-item>
+                    </core-menu>
+                </paper-dropdown>
+            </paper-dropdown-menu>
+
 
 
 
 
 
         </div>
-
     </template>
+
+<script>
+    Polymer(...);
+</script>
 </polymer-element>

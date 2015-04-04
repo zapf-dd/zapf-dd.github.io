@@ -42,35 +42,41 @@
 
 
 <core-drawer-panel id="drawerPanel">
-    <core-header-panel id="cdrawer" drawer mode="seamed" >
 
-        <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}">
+    <core-header-panel id="cdrawer" drawer mode="seamed" >
+        <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}"
+                style="height: 100%">
             <paper-item>
                 <a href="#Willkommen">Willkommen</a>
             </paper-item>
-            <paper-item>
-                <a href="#Anmeldung">Anmeldung</a>
-            </paper-item>
+            <core-item style="margin-top: 100%;">
+                <paper-button flex raised id="registerbutton">Anmeldung</paper-button>
+            <core-item>
         </core-menu>
-
     </core-header-panel>
 
-    <core-scroll-header-panel main mode="waterfall" condenses>
+
+
+    <core-scroll-header-panel main condenses keepCondensedHeader>
+        <paper-shadow z="1">
         <core-toolbar class="tall">
             <core-icon-button core-drawer-toggle icon="menu" style="background-color: transparent;"></core-icon-button>
-            <span flex class="bottom indent" >ZaPF in Dresden 2016</span>
+            <div flex horizontal end-justified layout>
+                <span id="countdown">Bitte Javascript aktivieren.</span>
+            </div>
+            <span class="bottom indent" >ZaPF in Dresden 2016</span>
         </core-toolbar>
-
+        </paper-shadow>
 
 
 
         <div class="content" style="margin-left: auto; margin-right: auto;">
-                <core-animated-pages valueattr="hash" selected="{{route}}">
+                <core-animated-pages transitions="cross-fade" valueattr="hash" selected="{{route}}">
                         <section hash="Willkommen" layout vertical>
-                           <welcome-page></welcome-page>
+                           <welcome-page cross-fade></welcome-page>
                         </section>
                         <section hash="Anmeldung" layout vertical>
-                            <registration-page></registration-page>
+                            <registration-page cross-fade></registration-page>
                         </section>
                 </core-animated-pages>
             </div>
@@ -79,7 +85,6 @@
 
 
     </core-scroll-header-panel>
-
 
 </core-drawer-panel>
 

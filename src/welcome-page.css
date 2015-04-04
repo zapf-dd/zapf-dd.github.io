@@ -1,0 +1,13 @@
+@media (min-width: 950px) {
+    .cols {max-width: 455px;}
+}
+@media (max-width: 950px) {
+    .cols {max-width: 100%;}
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+}
+
+

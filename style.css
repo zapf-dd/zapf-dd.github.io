@@ -2,10 +2,10 @@ body {
     font-family: sans-serif;
 }
 [main] {
-    background-color: #FFFFFF;
+    background-color: #f3f6f8;
 }
 [drawer] {
-    background-color: #f3f6f8;
+    background-color: #fff;
 }
 
 core-toolbar {
@@ -14,14 +14,35 @@ core-toolbar {
 }
 
 
-
 core-menu a {
     color: #000;
     text-decoration: none;
 }
 
 .content {
-    padding: 30px;
     max-width: 960px;
 }
 
+
+@media (min-width: 400px) {
+    #countdown {
+        visibility: visible;
+        font-size: small;
+        padding: 5px;
+        background-color: #57717d;
+        color: white;
+    }
+}
+
+@media (max-width: 400px) {
+    #countdown {
+        visibility: hidden;
+    }
+}
+
+#registerbutton {
+    background-color: #ff9800;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+}

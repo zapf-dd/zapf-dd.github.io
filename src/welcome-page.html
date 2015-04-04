@@ -1,30 +1,58 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="stylesheet" href="welcome-page.css">
+<link rel="import" href="../bower_components/paper-shadow/paper-shadow.html">
 
 <polymer-element name="welcome-page" noscript>
     <template>
+        <style>
+            @media (min-width: 1276px) {
+                .card {margin-top: 30px;}
+            }
+            @media (max-width: 1276px) {
+                .card {margin-top: 0px;}
+            }
+        </style>
+        <paper-shadow z="1" class="card" style="background-color: white; padding: 30px">
+        <div horizontal layout wrap>
+            <style>
+                @media (min-width: 1216px) {
+                    .cols {max-width: 435px;}
+                }
+                @media (max-width: 1216px) {
+                    .cols {max-width: 100%;}
+                }
 
-        <h1>Willkomen.</h1>
+            </style>
+
+            <div class="cols"><h1>Willkomen.</h1>
 
 
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-        dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                    dolor sit amet.</p>
 
-        <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea,
-        id minim maiestatis incorrupte duo. Dolorum verterem ad ius, his et nullam verterem.
-        Eu alia debet usu, an doming tritani est. Vix ad ponderum petentium suavitate, eum eu
-        tempor populo, graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur
-        nec, voluptua periculis has ut, at eos discere deleniti sensibus. Lorem ipsum dolor sit
-        amet, per in nusquam nominavi periculis, sit elit oportere ea, id minim maiestatis
-        incorrupte duo. Dolorum verterem ad ius, his et nullam verterem. Eu alia debet usu,
-        an doming tritani est. Vix ad ponderum petentium suavitate, eum eu tempor populo,
-        graece sententiae constituam vim ex. Cu torquatos reprimique neglegentur nec, voluptua
-        periculis has ut, at eos discere deleniti sensibus.
-        </p>
 
+            </div>
+            <div flex></div>
+            <div class="cols"><h1>Neuigkeiten</h1>
+
+
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo <duo></duo>
+                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                    dolor sit amet.</p>
+
+            </div>
+
+
+        </div>
+        </paper-shadow>
     </template>
 </polymer-element>
