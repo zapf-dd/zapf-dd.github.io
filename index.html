@@ -47,7 +47,45 @@
         <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}"
                 style="height: 100%">
             <paper-item layout>
-                <core-icon icon="home"></core-icon><a href="#Willkommen">Willkommen</a>
+                <core-icon icon="home"></core-icon><a href="#Willkommen">Home</a>
+            </paper-item>
+
+
+            <core-submenu icon="event" label="Programm">
+                <paper-item layout>
+                    <a href="#Willkommen">Zeitplan</a>
+                </paper-item>
+                <paper-item layout>
+                    <a href="#Willkommen">Arbeitskreise</a>
+                </paper-item>
+                <paper-item layout>
+                    <a href="#Willkommen">Exkursionen</a>
+                </paper-item>
+                <paper-item layout>
+                    <a href="#Willkommen">Plena</a>
+                </paper-item>
+            </core-submenu>
+
+            <core-submenu icon="room" label="Location">
+                <paper-item layout>
+                    <a href="#Willkommen">Plenarsaal</a>
+                </paper-item>
+                <paper-item layout>
+                    <a href="#Willkommen">AK-R&auml;ume</a>
+                </paper-item>
+                <paper-item layout>
+                    <a href="#Willkommen">Aufenthaltsbereich</a>
+                </paper-item>
+            </core-submenu>
+
+
+
+
+            <paper-item layout>
+                <core-icon icon="account-balance"></core-icon><a href="#Willkommen">Sponsoren</a>
+            </paper-item>
+            <paper-item layout>
+                <core-icon icon="supervisor-account"></core-icon><a href="#Willkommen">&Uuml;ber uns</a>
             </paper-item>
             <core-item style="margin-top: 100%;">
                 <paper-button flex raised id="registerbutton">Anmeldung</paper-button>

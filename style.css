@@ -22,6 +22,11 @@ core-menu a {
 
 }
 
+
+core-submenu::shadow #submenu {
+    margin-left: 0px;
+}
+
 .content {
     max-width: 960px;
 }
