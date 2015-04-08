@@ -45,51 +45,53 @@
 
     <core-header-panel id="cdrawer" drawer mode="seamed" style="box-shadow: rgba(0, 0, 0, 0.098) 0 2px 4px;">
         <core-menu id="menu" valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}"
-                style="height: 100%">
-            <paper-item layout>
+                style="height: 100%" excludedLocalNames="">
+
+
+
+            <paper-item layout label="Willkommen">
                 <core-icon icon="home"></core-icon><a href="#Willkommen">Home</a>
             </paper-item>
 
-
             <core-submenu icon="event" label="Programm">
                 <paper-item layout>
-                    <a href="#Willkommen">Zeitplan</a>
+                    <a href="#Willkommen" class="submenuitem">Zeitplan</a>
                 </paper-item>
                 <paper-item layout>
-                    <a href="#Willkommen">Arbeitskreise</a>
+                    <a href="#Willkommen" class="submenuitem">Arbeitskreise</a>
                 </paper-item>
                 <paper-item layout>
-                    <a href="#Willkommen">Exkursionen</a>
+                    <a href="#Willkommen" class="submenuitem">Exkursionen</a>
                 </paper-item>
                 <paper-item layout>
-                    <a href="#Willkommen">Plena</a>
+                    <a href="#Willkommen" class="submenuitem">Plena</a>
                 </paper-item>
             </core-submenu>
 
             <core-submenu icon="room" label="Location">
                 <paper-item layout>
-                    <a href="#Willkommen">Plenarsaal</a>
+                    <a href="#Willkommen" class="submenuitem">Plenarsaal</a>
                 </paper-item>
                 <paper-item layout>
-                    <a href="#Willkommen">AK-R&auml;ume</a>
+                    <a href="#Willkommen" class="submenuitem">AK-R&auml;ume</a>
                 </paper-item>
                 <paper-item layout>
-                    <a href="#Willkommen">Aufenthaltsbereich</a>
+                    <a href="#Willkommen" class="submenuitem">Aufenthaltsbereich</a>
                 </paper-item>
             </core-submenu>
-
-
-
 
             <paper-item layout>
                 <core-icon icon="account-balance"></core-icon><a href="#Willkommen">Sponsoren</a>
             </paper-item>
+
             <paper-item layout>
                 <core-icon icon="supervisor-account"></core-icon><a href="#Willkommen">&Uuml;ber uns</a>
             </paper-item>
-            <core-item style="margin-top: 100%;">
-                <paper-button flex raised id="registerbutton">Anmeldung</paper-button>
+
             <core-item>
+                <paper-button flex id="registerbutton">Anmeldung</paper-button>
+            </core-item>
+
         </core-menu>
     </core-header-panel>
 
@@ -108,12 +110,32 @@
 
         <div class="content" style="margin-left: auto; margin-right: auto;">
                 <core-animated-pages transitions="cross-fade" valueattr="hash" selected="{{route}}">
-                        <section hash="Willkommen" layout vertical>
+                        <section hash="Home" layout vertical>
                            <welcome-page cross-fade></welcome-page>
+                        </section>
+                        <section hash="Programm" layout vertical>
+                            <core-animated-pages transitions="cross-fade" valueattr="hash" selected="{{programmroute}}">
+                                <section hash="Zeitplan" layout vertical>
+                                    <div cross-fade>Zeitplan</div>
+                                </section>
+                                <section hash="Zeitplan" layout vertical>
+                                    <div cross-fade>Arbeitskreise</div>
+                                </section>
+                            </core-animated-pages>
+                        </section>
+                        <section hash="Location" layout vertical>
+                            <div cross-fade>Location</div>
+                        </section>
+                        <section hash="Sponsoren" layout vertical>
+                            <div cross-fade>Sponsoren</div>
+                        </section>
+                        <section hash="ueberuns" layout vertical>
+                            <div cross-fade>&Uuml;ber uns</div>
                         </section>
                         <section hash="Anmeldung" layout vertical>
                             <registration-page cross-fade></registration-page>
                         </section>
+
             </core-animated-pages>
             </div>
 

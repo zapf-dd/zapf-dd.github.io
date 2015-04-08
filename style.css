@@ -7,31 +7,6 @@ body {
 [drawer] {
     background-color: #fff;
 }
-
-core-toolbar {
-    background: #607d8b;
-    color: #FFF;
-}
-
-
-core-menu a {
-    color: #000;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-top: 2px;
-
-}
-
-
-core-submenu::shadow #submenu {
-    margin-left: 0px;
-}
-
-.content {
-    max-width: 960px;
-}
-
-
 @media (min-width: 400px) {
     #countdown {
         visibility: visible;
@@ -41,11 +16,36 @@ core-submenu::shadow #submenu {
         color: white;
     }
 }
-
 @media (max-width: 400px) {
     #countdown {
         visibility: hidden;
     }
+}
+core-toolbar {
+    background: #607d8b;
+    color: #FFF;
+}
+core-menu a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 16px;
+    margin-top: 2px;
+
+}
+core-submenu::shadow #submenu {
+    margin-left: 0px;
+}
+core-submenu::shadow > #submenuItem {
+    padding-left: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.submenuitem {
+    color: #999;
+    margin-left: 40px;
+}
+.content {
+    max-width: 960px;
 }
 
 #registerbutton {
@@ -53,4 +53,5 @@ core-submenu::shadow #submenu {
     color: white;
     width: 100%;
     font-weight: bold;
+    margin-bottom: 10px;
 }
